@@ -27,9 +27,6 @@ streamlit.dataframe(fruits_to_show)
 # API Calls in Streamlit
 streamlit.header('Fruityvice Fruit Advice')
 import requests
-fruityvice_response = requests.get("https://fruityvice.com/api/fruit/watermelon")
-streamlit.text(fruityvice_response.json())
-
 # normalizing the data
 fruityvice_normalized = pd.json_normalize(fruityvice_response.json())
 # making the data tabular
